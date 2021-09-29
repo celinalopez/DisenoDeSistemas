@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="personaUM" nsURI="http://www.example.org/personaUM" nsPrefix="personaUM">
+  <eClassifiers xsi:type="ecore:EClass" name="Persona">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="edad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="genero" eType="#//Genero"
+        defaultValueLiteral="femenino"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="padres" upperBound="2"
+        eType="#//Persona"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="esposo" eType="#//Persona"
+        eOpposite="#//Persona/esposa"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="esposa" eType="#//Persona"
+        eOpposite="#//Persona/esposo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amigos" lowerBound="1"
+        upperBound="-1" eType="#//Persona"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hijos" upperBound="-1"
+        eType="#//Persona"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hermanos" upperBound="-1"
+        eType="#//Persona"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="documento" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Genero">
+    <eLiterals name="femenino"/>
+    <eLiterals name="masculino" value="1"/>
+    <eLiterals name="noBinario" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EstadoCivil">
+    <eLiterals name="soltero"/>
+    <eLiterals name="casado" value="1"/>
+    <eLiterals name="viudo" value="2"/>
+    <eLiterals name="divorciado" value="3"/>
+    <eLiterals name="fallecido" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Diagrama">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incluye" upperBound="-1"
+        eType="#//Persona" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

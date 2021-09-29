@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="similUML" nsURI="http://www.example.org/similUML" nsPrefix="similUML">
+  <eClassifiers xsi:type="ecore:EClass" name="Clase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operaciones" upperBound="-1"
+        eType="#//Operaciones" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributos_contenidos" upperBound="-1"
+        eType="#//Atributos" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Tipo_Visibilidad">
+    <eLiterals name="private"/>
+    <eLiterals name="protected" value="1"/>
+    <eLiterals name="public" value="2"/>
+    <eLiterals name="package" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atributos">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibilidad" eType="#//Tipo_Visibilidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//Tipo_Predefinidos"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Tipo_Predefinidos">
+    <eLiterals name="String"/>
+    <eLiterals name="int" value="1"/>
+    <eLiterals name="double" value="2"/>
+    <eLiterals name="boolean" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operaciones">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibilidad" eType="#//Tipo_Visibilidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo_retorno" eType="#//Tipo_Retorno"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Tipo_Retorno">
+    <eLiterals name="void"/>
+    <eLiterals name="int" value="1"/>
+    <eLiterals name="double" value="2"/>
+    <eLiterals name="String" value="3"/>
+    <eLiterals name="boolean" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Diagrama">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clase_del_diagrama" upperBound="-1"
+        eType="#//Clase" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

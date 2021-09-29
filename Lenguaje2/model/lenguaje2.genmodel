@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/Lenguaje2/src-gen" creationIcons="false" editDirectory="/Lenguaje2.edit/src-gen"
+    editorDirectory="/Lenguaje2.editor/src-gen" modelPluginID="Lenguaje2" modelName="Lenguaje2"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>lenguaje2.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Lenguaje2" disposableProviderFactory="true" ecorePackage="lenguaje2.ecore#/">
+    <genClasses ecoreClass="lenguaje2.ecore#//Parrafo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference lenguaje2.ecore#//Parrafo/oracion"/>
+    </genClasses>
+    <genClasses ecoreClass="lenguaje2.ecore#//Oracion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference lenguaje2.ecore#//Oracion/verbo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference lenguaje2.ecore#//Oracion/adjetivo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference lenguaje2.ecore#//Oracion/sustantivo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference lenguaje2.ecore#//Oracion/articulo"/>
+    </genClasses>
+    <genClasses ecoreClass="lenguaje2.ecore#//Adjetivo"/>
+    <genClasses ecoreClass="lenguaje2.ecore#//Sustantivo"/>
+    <genClasses ecoreClass="lenguaje2.ecore#//Verbo"/>
+    <genClasses ecoreClass="lenguaje2.ecore#//Articulo"/>
+    <genClasses ecoreClass="lenguaje2.ecore#//Propios"/>
+    <genClasses ecoreClass="lenguaje2.ecore#//Concreto"/>
+  </genPackages>
+</genmodel:GenModel>

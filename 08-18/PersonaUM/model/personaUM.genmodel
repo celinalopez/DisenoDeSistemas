@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/PersonaUM/src-gen" creationIcons="false" editDirectory="/PersonaUM.edit/src-gen"
+    editorDirectory="/PersonaUM.editor/src-gen" modelPluginID="PersonaUM" modelName="PersonaUM"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>personaUM.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="PersonaUM" disposableProviderFactory="true" ecorePackage="personaUM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="personaUM.ecore#//Genero">
+      <genEnumLiterals ecoreEnumLiteral="personaUM.ecore#//Genero/femenino"/>
+      <genEnumLiterals ecoreEnumLiteral="personaUM.ecore#//Genero/masculino"/>
+      <genEnumLiterals ecoreEnumLiteral="personaUM.ecore#//Genero/noBinario"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="personaUM.ecore#//EstadoCivil">
+      <genEnumLiterals ecoreEnumLiteral="personaUM.ecore#//EstadoCivil/soltero"/>
+      <genEnumLiterals ecoreEnumLiteral="personaUM.ecore#//EstadoCivil/casado"/>
+      <genEnumLiterals ecoreEnumLiteral="personaUM.ecore#//EstadoCivil/viudo"/>
+      <genEnumLiterals ecoreEnumLiteral="personaUM.ecore#//EstadoCivil/divorciado"/>
+      <genEnumLiterals ecoreEnumLiteral="personaUM.ecore#//EstadoCivil/fallecido"/>
+    </genEnums>
+    <genClasses ecoreClass="personaUM.ecore#//Persona">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personaUM.ecore#//Persona/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personaUM.ecore#//Persona/edad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personaUM.ecore#//Persona/genero"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference personaUM.ecore#//Persona/padres"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference personaUM.ecore#//Persona/esposo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference personaUM.ecore#//Persona/esposa"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference personaUM.ecore#//Persona/amigos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference personaUM.ecore#//Persona/hijos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference personaUM.ecore#//Persona/hermanos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personaUM.ecore#//Persona/documento"/>
+    </genClasses>
+    <genClasses ecoreClass="personaUM.ecore#//Diagrama">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personaUM.ecore#//Diagrama/incluye"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

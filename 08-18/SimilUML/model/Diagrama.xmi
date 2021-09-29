@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<similUML:Diagrama
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:similUML="http://www.example.org/similUML"
+    xsi:schemaLocation="http://www.example.org/similUML similUML.ecore">
+  <clase_del_diagrama
+      nombre="Persona">
+    <operaciones
+        nombre="caminar"/>
+    <atributos_contenidos
+        nombre="nombre"/>
+    <atributos_contenidos
+        nombre="apellido"/>
+    <atributos_contenidos
+        nombre="DNI"/>
+  </clase_del_diagrama>
+  <clase_del_diagrama
+      nombre="Domicilio">
+    <atributos_contenidos
+        nombre="calle"/>
+    <atributos_contenidos
+        nombre="numero"/>
+  </clase_del_diagrama>
+</similUML:Diagrama>

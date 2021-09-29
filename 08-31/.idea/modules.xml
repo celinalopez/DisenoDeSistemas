@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/08-31.iml" filepath="$PROJECT_DIR$/.idea/08-31.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/agregacion/agregacion.iml" filepath="$PROJECT_DIR$/Java/agregacion/agregacion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/asociacion/asociacion.iml" filepath="$PROJECT_DIR$/Java/asociacion/asociacion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/composicion/composicion.iml" filepath="$PROJECT_DIR$/Java/composicion/composicion.iml" />
+    </modules>
+  </component>
+</project>

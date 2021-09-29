@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="lenguaje" nsURI="http://www.example.org/lenguaje" nsPrefix="lenguaje">
+  <eClassifiers xsi:type="ecore:EClass" name="Parrafo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oracion" lowerBound="1"
+        upperBound="-1" eType="#//Oracion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Oracion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="articulo" upperBound="-1"
+        eType="#//Articulo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="verbo" upperBound="-1"
+        eType="#//Verbo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sustantivo" upperBound="-1"
+        eType="#//Sustantivo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parrafo" upperBound="-1"
+        eType="#//Parrafo.1" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Articulo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Verbo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sustantivo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parrafo"/>
+</ecore:EPackage>

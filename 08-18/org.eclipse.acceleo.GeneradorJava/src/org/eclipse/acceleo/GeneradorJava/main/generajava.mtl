@@ -1,0 +1,26 @@
+[comment encoding = UTF-8 /]
+[module generajava('http://www.example.org/similUML')]
+
+
+[template public plantillaJava(raiz : Diagrama)]
+[comment @main/]
+
+[for (i : Clase | raiz.clase_del_diagrama)]
+
+	[file ('fuente/'+i.nombre+'.java', false, 'UTF-8')]
+	package fuente;
+	public class [i.nombre/]{
+		[generadorAtributos(i)/]
+	}
+	[/file]
+
+[/for]
+
+
+[/template]
+
+[template public generadorAtributos(clase : Clase)]
+	[for (i : Atributos | clase.atributos_contenidos)]
+		[i.visibilidad/] [i.tipo/] [i.nombre/];
+	[/for]
+[/template]

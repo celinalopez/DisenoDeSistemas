@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personaUM:Diagrama
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:personaUM="http://www.example.org/personaUM"
+    xsi:schemaLocation="http://www.example.org/personaUM personaUM.ecore">
+  <incluye nombre="Homero"
+      edad="45"
+      genero="masculino"
+      esposa="//@incluye.1"
+      amigos="//@incluye.5"
+      documento="3423465"/>
+  <incluye nombre="Marge"
+      edad="40"
+      esposo="//@incluye.0"
+      amigos="//@incluye.5"
+      documento="2556572"/>
+  <incluye nombre="Lisa"
+      edad="8"
+      padres="//@incluye.0 //@incluye.1"
+      amigos="//@incluye.4"
+      hermanos="//@incluye.3"/>
+  <incluye nombre="Bart"
+      edad="10"
+      genero="masculino"
+      padres="//@incluye.0 //@incluye.1"
+      amigos="//@incluye.4"
+      hermanos="//@incluye.2"/>
+  <incluye nombre="Milhouse"
+      edad="10"
+      genero="masculino"
+      amigos="//@incluye.2 //@incluye.3"
+      documento="23435"/>
+  <incluye nombre="Barney"
+      edad="50"
+      genero="masculino"
+      amigos="//@incluye.0 //@incluye.1"
+      documento="243456"/>
+</personaUM:Diagrama>
