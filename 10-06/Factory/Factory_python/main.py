@@ -9,4 +9,3 @@ if __name__ == '__main__':
     print('----------------------------')
     fabrica = PizzaFactory()
     print('El precio de la pizza tipo {0} es de: ${1}'.format('Muzzarella', PizzaFactory.pedir_pizza('Muzzarella').get_precio()))
-
