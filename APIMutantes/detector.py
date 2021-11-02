@@ -26,3 +26,35 @@ def isMutant(muestraADN):
         return True
     else:
         return False
+
+
+def isAdn(dna):
+    N = len(dna)
+    for filas in range(N):
+        M = 0
+        print()
+        for col in range(len(dna[filas])):
+            M += 1
+            print(dna[filas][col], end="")
+        if N == M:
+            pass
+        else:
+            return False
+
+    for f in range(len(dna)):
+        print()
+        fail = []
+        error = 0
+        for c in range(len(dna)):
+
+            if (dna[f][c] == 'A' or dna[f][c] == 'T' or dna[f][c] == 'C' or
+                    dna[f][c] == 'G'):
+                pass
+            else:
+                print(" ", end="")
+                error = 1
+                fail.append(dna[f][c])
+        if error:
+            return False
+    print()
+    return True

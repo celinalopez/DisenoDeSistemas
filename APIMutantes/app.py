@@ -22,11 +22,15 @@ def post():
     dna = json.loads(dna)
     dnalist = dna["dna"]
 
-    if detector.isMutant(dnalist):
-        msj = "ES MUTANTE!!!"
-        return {"msj": msj}
+    if detector.isAdn(dnalist):
+        if detector.isMutant(dnalist):
+            msj = "ES MUTANTE!!!"
+            return {"msj": msj}
+        else:
+            msj = "TODO OK, NO ES MUTANTE"
+            return {"msj": msj}
     else:
-        msj = "TODO OK, NO ES MUTANTE"
+        msj = "ERROR con la cadena de ADN, debe ser NxN y contener sólo elementos ACTG"
         return {"msj": msj}
 
 
